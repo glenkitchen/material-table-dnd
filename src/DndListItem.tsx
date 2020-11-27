@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { Draggable } from "react-beautiful-dnd";
 import styled from "styled-components";
-import { DndItem } from "./dnd-types";
+import { DndItem } from "./dnd";
 
 interface ContainerProps {
   isDragging: boolean;

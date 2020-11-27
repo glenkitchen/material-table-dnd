@@ -2,13 +2,14 @@ import { Typography } from "@material-ui/core";
 import React, { FC } from "react";
 import { DragDropContext, Droppable, DropResult } from "react-beautiful-dnd";
 import styled from "styled-components";
-import { DndItem } from "./dnd-types";
+import { DndItem } from "./dnd";
 import DndListItem from "./DndListItem";
 
 const Container = styled.div`
   border: 1px solid lightgrey;
   border-radius: 2px;
   margin: 8px;
+  width: 200px;
 `;
 
 const Title = styled(Typography)`
@@ -56,7 +57,7 @@ const DndList: FC<DndListProps> = ({ items, setItems }) => {
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <Container>
-        <Title>Columns Order</Title>
+        {<Title>Columns Order</Title>}
         <Droppable droppableId="columns">
           {(provided, snapshot) => (
             <Columns
